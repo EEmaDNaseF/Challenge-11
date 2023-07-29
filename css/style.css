@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --card-color : hsl(300, 43%, 22%) ;
+    --small-card-color : hsl(333, 80%, 67%) ;
+    --p-small-card-color: hsl(303, 10%, 53%) ;
+    --p-card-color :  hsl(0, 0%, 100%) ;
+    --p-color :hsl(300, 24%, 96%);
+
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: white;
+
+}   
+header {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: tan;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container .top-side {
+    display: flex;
+    justify-content: space-between;
+}
+.container .top-side .left {
+    padding: 20px;
+}
+.container .top-side .right {
+    padding: 20px;
+    width: 50%;
+}
+.container .top-side .left h1 {
+    color: var(--card-color);
+    width: 250px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+
+}
+.container .top-side .left p  {
+    color: var(--p-small-card-color);
+    line-height: 1.5;
+    width: 400px;
+}
+.container .top-side .right .block{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-color: var(--p-small-card-color);
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+}
+.container .top-side .right p {
+    font-size: 14px;
+    color: var(--card-color);
+
+}
+.container .top-side .right p.one {
+    margin-left: 8px;
+}
+.container .top-side .right .block-one,
+.container .top-side .right .block-two,
+.container .top-side .right .block-three {
+
+    width: 300px;
+}
+.container .top-side .right .block-three {
+    margin-left: 150px;
+
+}
+.container .top-side .right .block-two {
+    margin-left: 80px;
+
+}
+
+
+
+.container .bottom-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.container .bottom-side .card {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    color:white;
+    height: fit-content;
+}
+.container .bottom-side .card .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+
+}
+.container .bottom-side .card .info img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.container .bottom-side .card .info .name {
+    margin-left: 25px;
+}
+.container .bottom-side .card .info .name p.special {
+    color: var(--small-card-color);
+    margin-top: 3px;
+}
+.container .bottom-side .card .info .name p {
+    color: white;
+}
+.container .bottom-side .card p.pp {
+    line-height: 1.5;
+}
+
+.container .bottom-side .card-two {
+    margin-top: 30px;
+
+}
+.container .bottom-side .card-three {
+    margin-top: 60px;
+} 
+
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .container .top-side .left,
+    .container .top-side .right {
+        width: 100%;
+    }
+    .container .top-side .right .block-one,
+    .container .top-side .right .block-two,
+    .container .top-side .right .block-three {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container .bottom-side .card-two,
+    .container .bottom-side .card-three {
+        height: 350px;
+    }
+    .container .top-side .left h1 ,
+    .container .top-side .left p {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 675px) {
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .container .top-side .left h1 ,
+    .container .top-side .left p {
+        width: auto;
+    }
+    .container .top-side ,
+    .container .bottom-side   {
+        flex-direction: column;
+    }
+    .container .top-side {
+        text-align: center;
+    }
+    .container .top-side .right .block {
+        flex-direction: column;
+    }
+    .container .top-side .right p.one {
+        margin-top: 8px;
+    }
+    .container .top-side .left,
+    .container .top-side .right {
+        width: 100%;
+    }
+
+}
+
+
